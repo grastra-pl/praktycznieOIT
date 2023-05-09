@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Przykład animacji obracającej</title>
+    <style>
+      #canvas-container, #canvas-container canvas {
+        width: 300px;
+        height: 300px;
+        padding: 0;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinning {
+        /* im mniejsza wartość po rotate (czas obrotu) tym koło szybciej się obraca */
+        animation: rotate 1.5s linear infinite;
+      }
+
+      .paused {
+			  animation-play-state: paused;
+			}
+    </style>
+  </head>
+  <body>
+    <div id="canvas-container">
+      <canvas id="wheel-canvas"></canvas>
+    </div>
+
+    <script>
+    	const canvasContainer = document.getElementById('canvas-container');
+		const canvas = document.getElementById('wheel-canvas');
+		const ctx = canvas.getContext("2d");
+		canvas.width = canvas.height * (canvas.clientWidth / canvas.clientHeight);
+		const width = canvas.width;
+		const height = canvas.height;
+		const size = width * .4;
+		const centerX = width * .5;
+		const centerY = height * .5
+
+		const totalNumberOfPeople = 6; /** TODO: uzależnić liczbę ludzi od długości listy osób */
+
+		let currentAngle = 0;
+		let portionAngle = 2 * Math.PI / totalNumberOfPeople;
+		let isSpinning = false;
+
+    	for (let i=0; i<totalNumberOfPeople; i++) {
+        
+	        ctx.beginPath();
+	        ctx.arc(centerX, centerY, size, currentAngle, currentAngle + portionAngle);
+	        currentAngle += portionAngle;
+	        ctx.lineTo(centerX,centerY);
+	        
+            /*
+            wartości kolorów dobrałem na oko, tak by sąsiadujące się mocno różniły,
+            możecie zamiast tych wyliczeń użyć np. tablicy kolorów by dobrać jakieś ładne,
+            żywe kolory
+            */
+
+	        r = 255 / totalNumberOfPeople * i;
+	        g = 105 * (i % 2) + 20 * (5- (i % 5));
+	        b = 255 - g + 80 * (i % 3);
+	        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, 100)`;
+	        ctx.fill();
+    	}
+		
+    	canvasContainer.addEventListener('click', () => {
+    		const className = 'is_spinning';
+    		isSpinning = !isSpinning;
+    		canvasContainer.setAttribute('class', isSpinning ? 'spinning' : 'spinning paused');
+    	});
+		
+	</script>
+  </body>
+</html>
