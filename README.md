@@ -8,7 +8,7 @@ przeznaczone jest ono przede wszystkim dla osób zaczynających praktyki w firmi
 
 Planowo praktyki trwają w dni robocze, przez 7 godzin: od 12.00 do 19.00.
 Każdego dnia odbywają się spotkania z praktykantami, z których najważniejsze jest o 17.00
-i trwa godzinę lekcyjną (45 minut).
+i trwa godzinę lekcyjną (45 minut). Dodatkowe spotkanie jest o godzinie 12:15 i trwa 15 minut.
 
 ## zadania i przykłady dla praktykantów
 
