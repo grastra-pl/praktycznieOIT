@@ -10,6 +10,8 @@ W pliku index.html przygotuj szkielet strony.
 W pliku styles.css zdefiniuj wygląd elementów strony, takich jak kolory przycisków i pola tekstowego.
 W pliku script.js stwórz tablicę obiektów z informacją, który element wygrywa z którym, stwórz funkcje, które będą losowały wybór gracza i przeciwnika, porównywały je i wyświetlały wynik.
 
+![Co bije co](https://github.com/grastra-pl/praktycznieOIT/blob/develop/zadania/wspolne/RPSLS.webp)
+
 Pamiętaj, aby pracując wykorzystywać git, a po ukończeniu funkcjonalności, dokonać commita i pusha na zdalne repozytorium (to ostatnie dopiero wtedy, jak już zostanie wprowadzony temat pushów do zdalnego repo).
 
 Zadanie można rozwiązać na wiele sposobów, przykładowo:
