@@ -39,3 +39,27 @@ by utworzyć gałąź o takiej nazwie wydam polecenie:
 
 Zamiast "TymSok" wpisz swoje trzy pierwsze litery imienia i trzy pierwsze litery nazwiska.
 
+Teraz spróbuj dodać coś do repo. Do eksperymentów służy katalog ```smietnikEksperymentatora```
+w dowolny sposób (może być przy pomocy IDE) - utwórz w tym katalogu plik ```TwojeImieINazwisko.txt```
+(zamiast "TwojeImieINazwisko" użyj swojego imienia i nazwiska)
+jeśli chcesz to zrobić z poziomu git basha, użyj komend:
+
+```cd smietnikEksperymentatora```
+by przejść do katalogu smietnikEksperymentatora
+
+i
+```touch TwojeImieINazwisko.txt```
+by utworzyć plik TwojeImieINazwisko.txt.
+
+Pora teraz scommitować zmiany. Najpierw dodać je do paczki zmian:
+```git add .```
+
+a następnie skomitować:
+```git commit -m "dodanie pliku TwojeImieINazwisko.txt"```
+
+Teraz możesz już spuszować zmiany.
+W przyszłości będziesz to robić prostą komendą ```git push```, ale github jeszcze nie wie nic
+o Twoim niedawno utworzonym branczu (przypomnę, że o nazwie trzy litery imienia i trzy litery nazwiska)
+więc robiąc pierwszy push trzeba powiązać lokalny branch z branchem na serwerze
+
+```git push --set-upstream origin nazwaBrancha```
