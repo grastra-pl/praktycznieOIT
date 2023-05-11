@@ -3,7 +3,7 @@
   var ctx = canvas.getContext("2d");
   var width = document.getElementById('canvas').width; 
   var center = width/2;    
-  var deg = 260;
+  var deg = 360;
   var speed = 5;
   var slowDownRand = 0;
   var label =[];
@@ -142,17 +142,9 @@
     setTimeout(function() {
       ele.classList.remove("spin-wheel");
       deg= stopAngel[Math.floor(Math.random() * label.length)];
-      if(label.length>=7){
-      winner = Math.abs(Math.floor(((label.length - (deg / sliceDeg)) % label.length)-1));}
-      if(label.length<=6){
-        winner = Math.abs(Math.floor(((label.length - (deg / sliceDeg)) % label.length)));
-        if(winner ==0){
-          winner = winner +5;
-        }
-        if(winner==5 && label.length<4){
-          winner++;
-        }
-      }
+      
+      winner = Math.abs(Math.floor(((label.length - (deg / sliceDeg)) % label.length)-1));
+      
       
       console.log(winner);
       drawImg();
@@ -169,6 +161,7 @@ function results(winner){
 function Delete(){
   label.splice(winner-1,1);
   console.log(label);
+  console.log(label.length);
   drawImg();
 }
     

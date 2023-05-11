@@ -1,0 +1,18 @@
+*{
+    text-align: center;
+    background-color: grey;
+    color: white;
+    font-size: 20px;
+    font-family: verdana;
+}
+
+.przyciski{
+    background-color: white;
+}
+.reset{
+    background-color: black;
+}
+.passwords{
+    display: inline-block;
+    padding: 5px;
+}
