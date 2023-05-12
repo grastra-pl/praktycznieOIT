@@ -4,16 +4,23 @@ const startCells = [
     "","","","","","","","",""
 ]
 
-var go="koło";
+//Tworzy stałą tablicę startCells, która reprezentuje pustą planszę gry.
+
+var go="koło"; 
 infoDisplay.textContent="Teraz gra koło"
+//okręśla kto zaczyna grę
 
 function createBoard() {
     startCells.forEach((_cell,index) =>{
         const cellElement=document.createElement('div');
-        cellElement.classList.add('square');
-        cellElement.id=index;
+        cellElement.classList.add('square'); 
+        cellElement.id=index; 
         cellElement.addEventListener('click',whose_turn);
-        gameBoard.append(cellElement);
+        gameBoard.append(cellElement); 
+        //tworzy 9 części planszy
+        //przypisuje im klasę square oraz id odpowiednio od 0 do 8
+        //za każdym kliknięciem przycisku wywołana jest funkcja, która okręśla czyja jest teraz kolej
+        //dodaje komórki do planszy
     })
 }
 
@@ -27,7 +34,11 @@ go = go=="koło" ? "krzyżyk" : "koło";
 infoDisplay.textContent= "Teraz gra "+go+"!";
 e.target.removeEventListener('click',whose_turn);
 checkScore();
-
+//tworzy wewnątrz div'ów square inne divy o klasie odpowiednio koło lub krzyżyk
+// za pomocą instrukcji warunek ? coś : coś ,
+// zmieniane są wartości zmiennej go która przechowuje albo koło albo krzyżyk
+//zależnie od tego co teraz powinno grać 
+// instrukcja działa tak że jeśli warunek jest spełniony to robi to po prawej stronie : a w innym przypadku to po lewej stronie :
 }
 function checkScore(){
     const allSquares=document.querySelectorAll(".square")
@@ -37,6 +48,7 @@ function checkScore(){
         [0,3,6], [1,4,7], [2,5,8],
         [0,4,8], [2,4,6]
     ]
+    //wyżej rozpisane są wszystkie wygrywające kombinacje
     let isFilled = true;
 
     winningCombos.forEach(array=>{
