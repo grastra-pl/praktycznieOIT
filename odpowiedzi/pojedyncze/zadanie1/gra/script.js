@@ -96,3 +96,4 @@ function restartGame() {
     });
 
   }
+  ///sprawdzamy
