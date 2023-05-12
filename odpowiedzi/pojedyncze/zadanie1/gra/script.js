@@ -38,5 +38,28 @@ function checkScore(){
         [0,4,8], [2,4,6]
     ]
         
+    winningCombos.forEach(array=>{
+       const circleWins= array.every(cell=>allSquares[cell].firstChild?.classList.contains('koło'))
+
+       const crossWins= array.every(cell=>allSquares[cell].firstChild?.classList.contains('krzyżyk'))
+
+    
+
+       if(circleWins){
+        infoDisplay.textContent = "Koło wygrywa!";
+        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+        return;
+       }
+        if(crossWins){
+        infoDisplay.textContent = "Krzyżyk wygrywa!";
+        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+        return;
+       }
+       
+    
+       
+    })
+
+    
     
 }
