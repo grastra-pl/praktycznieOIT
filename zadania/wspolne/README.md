@@ -1,4 +1,25 @@
-# Papier, kamień, nożyce, Spock, jaszczur
+# Wspólne zadania
+
+## Zapisywanie wyników
+W pliku score.sql znajduje się kod trzech tabel w bazie danych:
+
+```game```
+
+```player```
+
+```score```
+
+Waszym zadaniem jest stworzenie w Waszych dwuosobowych zespołach możliwości zapisu wyników
+uzyskiwanych w grach.
+W tym celu trzeba:
+
+1. Dodać do tablicy game nowe rekordy z Waszymi grami (niech identyfikator rekordu będzie
+taki sam jak zadania)
+
+2. Stworzyć mechanizm zapisywania do tablicy score wyniku każdej z rozegranych gier.
+
+
+## Papier, kamień, nożyce, Spock, jaszczur
 
 Przygotuj proszę trzy pliki:
 
