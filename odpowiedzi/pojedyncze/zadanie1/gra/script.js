@@ -60,12 +60,12 @@ function checkScore(){
 
        if(circleWins){
         infoDisplay.textContent = "Koło wygrywa!";
-        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+        allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) // uniemożliwia dalsze granie po określeniu wyniku
         return;
        }
         if(crossWins){
         infoDisplay.textContent = "Krzyżyk wygrywa!";
-        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+        allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) 
         return;
        }
        array.forEach(cell => {
@@ -78,7 +78,7 @@ function checkScore(){
     })
     if (isFilled) {
         infoDisplay.textContent = "Remis";
-        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
+        allSquares.forEach(square => square.replaceWith(square.cloneNode(true))); 
     }
     
     const restartButton = document.getElementById("restartButton");
@@ -87,7 +87,7 @@ function checkScore(){
 function restartGame() {
     const allSquares = document.querySelectorAll(".square");
     allSquares.forEach(square => {
-      square.innerHTML = "";
+      square.innerHTML = ""; //wstawia puste pola, czyści kwadraty
       square.addEventListener('click', whose_turn);
       infoDisplay.textContent="Teraz gra koło"
     });
