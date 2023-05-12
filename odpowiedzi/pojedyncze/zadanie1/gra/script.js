@@ -37,7 +37,8 @@ function checkScore(){
         [0,3,6], [1,4,7], [2,5,8],
         [0,4,8], [2,4,6]
     ]
-        
+    let isFilled = true;
+
     winningCombos.forEach(array=>{
        const circleWins= array.every(cell=>allSquares[cell].firstChild?.classList.contains('koło'))
 
@@ -55,11 +56,28 @@ function checkScore(){
         allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
         return;
        }
-       
+       array.forEach(cell => {
+            if (!allSquares[cell].firstChild) {
+                isFilled = false;
+            }
+        });
     
        
     })
-
+    if (isFilled) {
+        infoDisplay.textContent = "Remis";
+        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)));
+    }
     
-    
+    const restartButton = document.getElementById("restartButton");
+    restartButton.addEventListener("click", restartGame);
 }
+function restartGame() {
+    const allSquares = document.querySelectorAll(".square");
+    allSquares.forEach(square => {
+      square.innerHTML = "";
+      square.addEventListener('click', whose_turn);
+      infoDisplay.textContent="Teraz gra koło"
+    });
+
+  }
