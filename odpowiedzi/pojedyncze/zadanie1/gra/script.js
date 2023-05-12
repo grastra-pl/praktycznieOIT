@@ -39,6 +39,7 @@ checkScore();
 // zmieniane są wartości zmiennej go która przechowuje albo koło albo krzyżyk
 //zależnie od tego co teraz powinno grać 
 // instrukcja działa tak że jeśli warunek jest spełniony to robi to po prawej stronie : a w innym przypadku to po lewej stronie :
+//e.target.removeEventListener('click',whose_turn); usuwa nasłuchwanie na kliknięcie z elementu na którym zostało wykonane zdarzenie "e" (event object)
 }
 function checkScore(){
     const allSquares=document.querySelectorAll(".square")
