@@ -7,8 +7,10 @@ btn.onclick = function () {
   deg = Math.floor(5000 + Math.random() * 5000); 
   container.style.transform = "rotate(" + deg + "deg)"; 
   setTimeout(() => {
-    
-    
+    console.log("surowe deg", deg);
+    console.log("deg obcięte", deg % 360);
+    console.log("obrobione deg w złym kierunku", Math.floor((deg % 360) / 45));
+    console.log(8-Math.floor((deg % 360) / 45));
   }, 5000); 
 };
 let form = document.getElementById("input-form");
