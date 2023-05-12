@@ -1,0 +1,62 @@
+.maze {
+
+}
+
+.wall {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.wall.upper-left,
+.wall.upper-right,
+.wall.bottom-left,
+.wall.bottom-right
+{
+  width: 300px;
+  height: 25px;
+}
+
+.wall.left-upper,
+.wall.right-upper,
+.wall.left-bottom,
+.wall.right-bottom
+{
+  width: 25px;
+  height: 300px;
+}
+
+.wall.upper-right,
+.wall.bottom-right
+{
+  left: 400px;
+}
+
+.wall.bottom-left,
+.wall.bottom-right
+{
+  top: 700px;
+}
+
+.wall.left-bottom,
+.wall.right-bottom
+{
+  top: 400px;
+}
+
+.wall.right-upper,
+.wall.right-bottom
+{
+  left: 675px;
+}
+
+
+.wall {
+  background-color: black;
+}
+
+.player {
+  background-color: yellow;
+  width: 25px;
+  height: 25px;
+}
