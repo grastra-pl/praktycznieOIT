@@ -1,0 +1,33 @@
+.wheel{
+  display:inline-block;
+  position:relative;
+  overflow:hidden;
+  float: left;
+}
+.wheel:after{
+  content:"";
+  background:red;
+  border:2px solid white;
+  position:absolute;
+  top:-7px;
+  left:50%;
+  width:10px;
+  height:10px;
+  margin-left:-7px;
+  transform: rotate(45deg)
+}
+
+*{
+  text-align: left;
+  background-color: grey;
+  color: white;
+  font-size: 20px;
+  font-family: verdana;
+}
+
+.przyciski{
+    background-color: white;
+}
+.reset{
+    background-color: black;
+}
