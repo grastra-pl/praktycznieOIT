@@ -64,7 +64,7 @@ function checkScore(){
         allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) // uniemożliwia dalsze granie po określeniu wyniku
         isFilled=false;
         return;
-       }
+       }  
         if(crossWins){
         infoDisplay.textContent = "Krzyżyk wygrywa!";
         allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) 
