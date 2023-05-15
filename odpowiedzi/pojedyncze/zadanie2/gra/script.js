@@ -111,26 +111,45 @@ var wrong =0;
 var loses =0;
 var generated_word;
 var win =0;
+var result=0;
 const alfabets_letter = ["a","ą","b","c","ć","d","e","ę","f","g","h","i","j","k","l","ł","m","n","ń","o","ó","p","q","r","s","ś","t","u","v","w","x","y","z","ź","ż"];
 
-function insertResultsIntoDatabase(){
 
-var urlString ="q="+ques;
+  
+  
 
-$.ajax
-({
-url: "ajax_js/q_ajax.php",
-type : "POST",
-cache : false,
-data : urlString,
-success: function(response)
-{
-alert(response);
-}
-});
+function winRes(){
+    
+        var data = result;
 
+        console.log(result);
+        $.ajax({
+        type: 'POST',
+        url: 'insert.php',
+        data: data,
 
-}
+        success:function(data){
+            console.log("sukces");
+        }
+    
+        })
+    }
+function loseRes(){
+    
+        var data1 = result;
+    
+        console.log(result);
+        $.ajax({
+        type:'POST',
+        url:'insert1.php',
+        data: data1,
+
+        success:function(data){
+            console.log("sukces");
+        }
+    
+        })
+    }
 
 function selectLevel(level){
     if(
@@ -238,15 +257,21 @@ function check(letter){
         }
     }else{
         win++;
-        console.log("1")
+        console.log(win);
+        console.log(array_of_string.length);
     }
 }
 
 if(win === array_of_string.length){
     var html ='<h1>WYGRAŁEŚ</h1>'
     document.getElementById('results').innerHTML = html;
-    document.getElementById("buttons").hidden = true;
+
     document.getElementById("results").hidden = false;
+    result = 1;
+    var html ='<button onclick="winRes()" id="joseph">zapisz wyniki</button>';
+    document.getElementById('buttons').innerHTML = html;
+    document.getElementById('input1').value=result ;
+
     }
 
 if(loses === 1){
@@ -300,4 +325,8 @@ if(loses === 4){
         }
         
     }
-}}
+    result = -100;
+    var html ='<button onclick="loseRes()" id="joseph">zapisz wyniki</button>';
+    document.getElementById('buttons').innerHTML = html;}
+    document.getElementById('input1').value=result ;
+}
