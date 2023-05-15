@@ -113,6 +113,25 @@ var generated_word;
 var win =0;
 const alfabets_letter = ["a","ą","b","c","ć","d","e","ę","f","g","h","i","j","k","l","ł","m","n","ń","o","ó","p","q","r","s","ś","t","u","v","w","x","y","z","ź","ż"];
 
+function insertResultsIntoDatabase(){
+
+var urlString ="q="+ques;
+
+$.ajax
+({
+url: "ajax_js/q_ajax.php",
+type : "POST",
+cache : false,
+data : urlString,
+success: function(response)
+{
+alert(response);
+}
+});
+
+
+}
+
 function selectLevel(level){
     if(
         level === "easy"
