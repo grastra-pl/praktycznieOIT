@@ -63,12 +63,14 @@ function checkScore(){
         infoDisplay.textContent = "Koło wygrywa!";
         allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) // uniemożliwia dalsze granie po określeniu wyniku
         isFilled=false;
+        winRes();
         return;
        }  
         if(crossWins){
         infoDisplay.textContent = "Krzyżyk wygrywa!";
         allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) 
         isFilled=false;
+        winRes();
         return;
        }
        array.forEach(cell => {
@@ -82,6 +84,7 @@ function checkScore(){
     if (isFilled) {
         infoDisplay.textContent = "Remis";
         allSquares.forEach(square => square.replaceWith(square.cloneNode(true))); 
+        loseRes();
     }
     
     const restartButton = document.getElementById("restartButton");
@@ -97,3 +100,36 @@ function restartGame() {
 
   }
   ///sprawdzamy
+
+  function winRes(){
+
+        var data = 1;
+
+        
+        $.ajax({
+        type: 'POST',
+        url: 'insert.php',
+        data: data,
+
+        success:function(data){
+            console.log("sukces");
+        }
+
+        })
+    }
+function loseRes(){
+
+        var data1 = -1;
+
+       
+        $.ajax({
+        type:'POST',
+        url:'insert1.php',
+        data: data1,
+
+        success:function(data){
+            console.log("sukces");
+        }
+
+        })
+    }
