@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <input type="text" id="input1" hidden>
     <div id="select-level">
         <h1>Poziom trudności</h1>
     <button onclick="selectLevel('easy')" id="easy">Łatwy</button>
@@ -28,9 +29,14 @@
             
 
         </div>
-        <div id="results" hidden></div>
+        <div>
+        <table id="table">
 
+        </table>
+        <div id="results" hidden></div>
+    </div>
     </div>
     <script src="script.js"></script>
+
 </body>
 </html>

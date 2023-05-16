@@ -113,16 +113,24 @@ var generated_word;
 var win =0;
 var result=0;
 const alfabets_letter = ["a","ą","b","c","ć","d","e","ę","f","g","h","i","j","k","l","ł","m","n","ń","o","ó","p","q","r","s","ś","t","u","v","w","x","y","z","ź","ż"];
+var gatheredResults;
 
 
-  
-  
+async function getResults() {
+    fetch('http://localhost/api/common.php', {
+  method:'GET'
+    })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+        gatheredResults = JSON.parse(data);
+    })
+}
 
 function winRes(){
     
         var data = result;
-
-        console.log(result);
         $.ajax({
         type: 'POST',
         url: 'insert.php',
@@ -133,11 +141,13 @@ function winRes(){
         }
     
         })
+        let html = "<button onclick='showLeaderboard()'>Pokaz liste</button>"
+        document.getElementById('buttons').innerHTML = html;
+
     }
-function loseRes(){
-    
+async function loseRes(){
         var data1 = result;
-    
+        getResults();
         console.log(result);
         $.ajax({
         type:'POST',
@@ -149,6 +159,19 @@ function loseRes(){
         }
     
         })
+        let html = "<button onclick='showLeaderboard()'>Pokaz liste</button>"
+        document.getElementById('buttons').innerHTML = html;
+    }
+    function showLeaderboard(){
+        console.log(Object.keys(gatheredResults).length)
+        var html ="<tr><th>id</th><th>creation_time</th><th>deleted</th><th>game_id</th><th>modification_time</th><th>player_id</th><th>value</th></tr>";
+        document.getElementById('table').innerHTML += html;
+        
+        for(var i=0;i<Object.keys(gatheredResults).length;i++){
+            let data1 = gatheredResults[i];
+            var html ="<tr><td>"+data1.id+"</td><td>"+data1.creation_time+"</td><td>"+data1.deleted+"</td><td>"+data1.game_id+"</td><td>"+data1.modification_time+"</td><td>"+data1.player_id+"</td><td>"+data1.value+"</td></tr>";
+            document.getElementById('table').innerHTML += html;
+        }
     }
 
 function selectLevel(level){
@@ -271,47 +294,46 @@ if(win === array_of_string.length){
     var html ='<button onclick="winRes()" id="joseph">zapisz wyniki</button>';
     document.getElementById('buttons').innerHTML = html;
     document.getElementById('input1').value=result ;
-
     }
 
 if(loses === 1){
-    var html ='<img src="1.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/1.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }
 if(loses === 2){
-    var html ='<img src="2.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/2.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }
 if(loses === 3){
-    var html ='<img src="3.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/3.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }
 if(loses === 4){
-    var html ='<img src="4.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/4.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }if(loses === 5){
-    var html ='<img src="5.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/5.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }if(loses === 6){
-    var html ='<img src="6.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/6.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }if(loses === 7){
-    var html ='<img src="7.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/7.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }if(loses === 8){
-    var html ='<img src="8.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/8.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }if(loses === 9){
-    var html ='<img src="9.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/9.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }if(loses === 10){
-    var html ='<img src="10.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/10.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }if(loses === 11){
-    var html ='<img src="11.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/11.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
 }if(loses === 12){
-    var html ='<img src="12.png" alt="miejsce na obrazek wisielec"><br>'
+    var html ='<img src="./img/12.png" alt="miejsce na obrazek wisielec"><br>'
     document.getElementById('imge').innerHTML = html;
     var html2 = '';
         document.getElementById('password').innerHTML = html2;
