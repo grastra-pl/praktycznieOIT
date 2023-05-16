@@ -40,6 +40,6 @@ button, header {
   
   button:hover {
     background-color: #3e8e41; /* kolor tła po najechaniu myszą */
-    color: white; /* kolor tekstu po najechaniu myszą */
+    color: white; /* kolor tekstu po najechaniu myszą. */
   }
   

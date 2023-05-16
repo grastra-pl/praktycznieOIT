@@ -44,4 +44,5 @@ function check() {
     } else {
         alert("Wpisana liczba jest większa od wygenerowanej.");
     }
+    
 }
