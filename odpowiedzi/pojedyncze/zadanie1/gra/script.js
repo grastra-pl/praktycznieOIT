@@ -109,7 +109,6 @@ type: "POST",
 url: "insert.php",
 success: function(data) {
 scoreTableBody.innerHTML = data;
-console.log("Sukces");
 }
 });
 }
@@ -121,7 +120,6 @@ url: "insert1.php",
 data: { lastId: Math.floor(Math.random() * 100) + 1 },
 success: function(data) {
 scoreTableBody.innerHTML = data;
-console.log("Sukces");
 }
 });
 }
