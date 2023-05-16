@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Kółko Krzyżyk w JS</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
-        
-        <div id="gameboard"></div>
-        <br>
-        <button id="restartButton"><img src="nuke.png"></button>
-        <p id="info"></p>
+<head>
+  <title>Kółko Krzyżyk w JS</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <div id="gameboard"></div>
+  <br>
+  <button id="restartButton"><img src="nuke.png"></button>
+  <button onclick="winRes()"><img src="tabela.png"></button>
+  <p id="info"></p>
+ 
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Creation Time</th>
+        <th>Modification Time</th>
+        <th>Deleted</th>
+        <th>Game ID</th>
+        <th>Player ID</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody id="scoreTableBody">
+      <!-- Placeholder for table data -->
+    </tbody>
+  </table>
 
-        <script src="script.js"></script>
-    </body>
+  <script src="script.js"></script>
+</body>
 </html>

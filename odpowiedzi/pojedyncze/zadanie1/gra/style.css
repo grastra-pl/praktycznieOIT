@@ -5,12 +5,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    
     flex-direction:column;
     font-family:'Are You Serious';
     font-size:40px;
     color:white;
-    background-image: url(tło.jpg);
+    background-image:url(tło.jpg);
 }
 
 #gameboard{
@@ -72,4 +72,5 @@ img{
 }
 button{
     background-color: black;
+    color:white;
 }
