@@ -10,10 +10,11 @@ try {
 
     $query = $conn->query("SELECT * FROM score");
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
+    // Pobranie wyników zapytania do tablicy asocjacyjnej
 
     foreach ($result as $row) {
         echo "<tr>";
-        echo "<td>" . $row['id'] . "</td>";
+        echo "<td>" . $row['id'] . "</td>"; // Wyświetlenie wartości kolumny
         echo "<td>" . $row['creation_time'] . "</td>";
         echo "<td>" . $row['modification_time'] . "</td>";
         echo "<td>" . $row['deleted'] . "</td>";
