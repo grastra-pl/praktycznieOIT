@@ -22,7 +22,7 @@ CREATE TABLE `player` (
 
 INSERT INTO `player` (`id`, `creation_time`, `modification_time`, `deleted`, `name`, `password`, `banned`) VALUES
 (1, '0000-00-00 00:00:00', '2023-05-12 14:46:22', 0, 'player1', '$2a$12$spzicuEtC1tf7Lmw3TbWV.tjbEW1qarPhthjiYabNQ7ULfQWy37TS', 0);
-
+   
 CREATE TABLE `score` (
   `id` int(11) NOT NULL,
   `creation_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -37,7 +37,10 @@ ALTER TABLE `score`
   ADD PRIMARY KEY (`id`),
   ADD KEY `game_id` (`game_id`),
   ADD KEY `player_id` (`player_id`);
+<<<<<<< HEAD
+=======
 
+>>>>>>> PawNaw
 INSERT INTO `score` (`id`, `creation_time`, `modification_time`, `deleted`, `game_id`, `player_id`, `value`) VALUES
 (1, '0000-00-00 00:00:00', '2023-05-12 15:40:48', 0, 1, 1, 100),
 (2, '0000-00-00 00:00:00', '2023-05-12 15:41:59', 0, 1, 1, -100),
