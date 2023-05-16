@@ -1,0 +1,12 @@
+A więc tak w kodzie poprawnie działa mi mechanizm kręcenia się koła,
+oraz wprowadzania danych za pomocą formularza do koła,
+lecz jeśli chcielibyśmy wprowadzić np 3 wartości to 
+zostaną one wprowadzone lecz reszta zostanie pusta 
+Jak widać brakuje u mnie jakiegokolwiek systemu pokazywania zwycięzcy bo nawet z 
+pomocą Chatu GPT system podawania wygranego nie działał poprawnie
+Brakuje też możliwości usunięcia wartości z koła i związanej z tym funkcji która
+odpowiednio by zwiększała poszczególne części koła. Jak skończe robić grę 
+(ja wylosowałem kółko krzyżyk) to będę próbował dodać te funkcje ale w tym
+momencie funkcji brakuje 
+
+(stan zmian na godzine 18:16 czwartek)
