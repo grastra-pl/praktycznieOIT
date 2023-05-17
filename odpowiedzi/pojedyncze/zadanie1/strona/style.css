@@ -4,12 +4,14 @@ body{
     font-family: Bree Serif;
     margin: 0;
     padding: 0;
+    
     display: flex;
     
 }
 #calosc{
     margin: 2vh 2vw;
     display: flex;
+    
 }
 #czesc1{
     width: 46vw;
@@ -75,4 +77,37 @@ margin-top:2vh;
 display: inline-block;
 
 align-items:flex-start;
+}
+#duzy-napis{
+    clear: both;
+    width:100%;
+    margin-top: -2vh;
+    font-size: 6.2rem;
+    height: 7vh;
+    white-space: nowrap;
+}
+#srodek-lewo{
+width:50%;
+height: 45vh;
+float: left;
+}
+#srodek-prawo{
+width:50%;
+height: 45vh;
+float: left;
+}
+#zdjecie1{
+
+    height: 85%;
+width: 100%;
+background-image: url(przybory-kuchenne.png);
+background-size: 100% 100%;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+
+#napis_pod_zdjeciem{
+height: 15%;
+width: 100%;
 }
