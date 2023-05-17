@@ -1,39 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-body{
+body {
     background-color: #ead3b4;
     font-family: Bree Serif;
     margin: 0;
     padding: 0;
-    
     display: flex;
-    
+    overflow-y: auto; /* Ustalamy przewijanie w osi Y dla całej strony */
 }
-#calosc{
+    
+  
+  #calosc {
     margin: 2vh 2vw;
     display: flex;
-    
+    overflow-x: hidden;
+    flex-direction: row; /* Ustawiamy układ w kolumnie */
+    flex: 1; /* Rozciągamy #calosc, aby wypełnił dostępną przestrzeń */
+    overflow-y: auto; /* Ustalamy przewijanie w osi Y dla #calosc */
+    overflow-x: hidden;
 }
-#czesc1{
+  
+  #czesc1 {
     width: 46vw;
-    color:#503723;
-    flex:1;
+    color: #503723;
     margin-right: 2vw;
-    
+    flex-direction: row;
     font-size: 1rem;
     text-align: center;
-    height: 98vh;
-}
-#czesc2{
-    margin-top: 1vh;
+    min-height: 96vh; /* Ustalamy minimalną wysokość dla #czesc1 */
+  }
+  #czesc2 {
     width: 46vw;
-    color:#503723;
-    flex:1;
+    color: #503723;
+    flex: 1;
     margin-left: 2vw;
-    
     font-size: 1rem;
-    height: 98vh;
     text-align: center;
-}
+    min-height: 96vh; /* Ustalamy minimalną wysokość dla #czesc2 */
+  }
 #header{
     font-size: 6.5rem;
     letter-spacing: 0.2rem;
