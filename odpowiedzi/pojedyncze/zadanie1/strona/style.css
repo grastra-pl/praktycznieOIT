@@ -33,7 +33,7 @@ body{
     text-align: center;
 }
 #header{
-    font-size: 5rem;
+    font-size: 6.5rem;
     letter-spacing: 0.2rem;
     font-weight: bold;
     white-space: nowrap;
@@ -71,8 +71,8 @@ body{
 }
 .data_baner{
 height: 2.5vh;
-margin-top:3vh;
+margin-top:2vh;
 display: inline-block;
-justify-content: center;
-align-items: center;
+
+align-items:flex-start;
 }
