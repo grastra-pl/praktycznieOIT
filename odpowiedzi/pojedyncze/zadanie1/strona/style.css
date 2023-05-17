@@ -8,11 +8,11 @@ body{
     
 }
 #calosc{
-    margin: 3vh 3vw;
+    margin: 2vh 2vw;
     display: flex;
 }
 #czesc1{
-    width: 45vw;
+    width: 46vw;
     color:#503723;
     flex:1;
     margin-right: 2vw;
@@ -22,8 +22,8 @@ body{
     height: 98vh;
 }
 #czesc2{
-    
-    width: 45vw;
+    margin-top: 1vh;
+    width: 46vw;
     color:#503723;
     flex:1;
     margin-left: 2vw;
@@ -42,7 +42,7 @@ body{
     justify-content: center;
     word-spacing: 0.5rem;
     height: 10vh;
-    width: 45vw;
+    width: 46vw;
 }
 .data-baner-left{
     height: 2.5vh;
@@ -66,7 +66,7 @@ body{
 .linia{
     border-top: 0.2rem solid #503723;
     clear: both;
-    width: 45vw;
+    width: 46vw;
     
 }
 .data_baner{
