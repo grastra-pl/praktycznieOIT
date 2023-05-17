@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+body{
+    background-color: #ead3b4;
+    font-family: Bree Serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+#calosc{
+    margin: 3vh 3vw;
+    display: flex;
+}
+#czesc1{
+    width: 45vw;
+    color:#503723;
+    flex:1;
+    margin-right: 2vw;
+    
+    font-size: 1rem;
+    text-align: center;
+    height: 98vh;
+}
+#czesc2{
+    
+    width: 45vw;
+    color:#503723;
+    flex:1;
+    margin-left: 2vw;
+    
+    font-size: 1rem;
+    height: 98vh;
+    text-align: center;
+}
+#header{
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 0.5rem;
+    height: 10vh;
+    width: 45vw;
+}
+.data-baner-left{
+    height: 2.5vh;
+    float: left;
+    width:25%;
+    
+    text-align: left;
+}
+.data-baner-mid{
+    height: 2.5vh;
+    float: left;
+    width:50%;
+    text-align: center;
+}
+.data-baner-right{
+    height: 2.5vh;
+    float: left;
+    width:25%;
+    text-align: right;
+}
+.linia{
+    border-top: 0.2rem solid #503723;
+    clear: both;
+    width: 45vw;
+    
+}
+.data_baner{
+height: 2.5vh;
+margin-top:3vh;
+display: inline-block;
+justify-content: center;
+align-items: center;
+}
