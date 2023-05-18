@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bree+Serif&display=swap');
 body {
     background-color: #ead3b4;
-    font-family: Bree Serif;
+    font-family: Bree Serif ;
     margin: 0;
     padding: 0;
     display: flex;
-    overflow-y: auto; /* Ustalamy przewijanie w osi Y dla całej strony */
+    /* Ustalamy przewijanie w osi Y dla całej strony */
 }
     
   
   #calosc {
-    margin: 2vh 2vw;
+    margin: 2% 2% ;
     display: flex;
-    overflow-x: hidden;
+    
     flex-direction: row; /* Ustawiamy układ w kolumnie */
-    flex: 1; /* Rozciągamy #calosc, aby wypełnił dostępną przestrzeń */
-    overflow-y: auto; /* Ustalamy przewijanie w osi Y dla #calosc */
-    overflow-x: hidden;
+     /* Rozciągamy #calosc, aby wypełnił dostępną przestrzeń */
+    
+    
 }
   
   #czesc1 {
@@ -32,17 +32,20 @@ body {
     width: 46vw;
     color: #503723;
     flex: 1;
+    margin-top: 1vh;
     margin-left: 2vw;
     font-size: 1rem;
     text-align: center;
     min-height: 96vh; /* Ustalamy minimalną wysokość dla #czesc2 */
   }
 #header{
-    font-size: 6.5rem;
+    font-size: 5rem;
     letter-spacing: 0.2rem;
     font-weight: bold;
+    font-stretch: ultra-expanded;
     white-space: nowrap;
     display:flex;
+    font-family: Alfa Slab One;
     align-items: center;
     justify-content: center;
     word-spacing: 0.5rem;
@@ -72,6 +75,7 @@ body {
     border-top: 0.2rem solid #503723;
     clear: both;
     width: 46vw;
+    font-weight:lighter;
     
 }
 .data_baner{
@@ -84,33 +88,201 @@ align-items:flex-start;
 #duzy-napis{
     clear: both;
     width:100%;
+    
     margin-top: -2vh;
     font-size: 6.2rem;
     height: 7vh;
     white-space: nowrap;
+    margin-bottom: 8%;
 }
 #srodek-lewo{
 width:50%;
-height: 70%;
+height: 80%;
 float: left;
+clear: both;
 }
 #srodek-prawo{
 width:50%;
-height: 70%;
+height: 80%;
 float: left;
 }
 #zdjecie1{
 
-    height: 85%;
+height: 82%;
 width: 100%;
 background-image: url(przybory-kuchenne.png);
-background-size: 100% 100%;
-background-position: center;
+background-size: 97% 98%;
+display: flex;
+align-items: flex-end;
+background-position: top right;
 background-repeat: no-repeat;
+clear: both;
+}
+#pod_duzym_obrazkiem{
+    width: 97.3%;
+    height: 18%;
+    margin-top:-0.3rem;
+    text-align: justify;
+    font-size:1.1rem ;
+    display: flex;
+    line-height: 1.2rem;
+    margin-left:0.75rem;
 }
 
+#world{
+    margin-top: -12%;
+    display: flex;
+    text-align: left;
+    width:70%;
+    font-size: 6.2rem;
+    white-space: nowrap;
+}
+.china{
+    text-align: left;
+    clear: both;
+    width:80%;
+    margin-top: 1rem;
+    line-height: 2.6rem;
+    font-stretch: narrower;
+    font-size: 2.87rem;
+    display: flex;
+}
+.the{
+    font-size: 1.38rem;
+}
+#elephant{
+    margin-top:1.55rem;
+    clear: both;
+    width:80%;
+    white-space: nowrap;
+    text-align: left;
+    display:flex;
+}
+#linia_mała{
+    width:65%;
+    height: 0.2rem;
+    margin-top: 1.37rem;
+    border-top: solid 0.2rem #503723;
+    margin-left: 2.65rem;
+    
+}
+.tekst_linia1{
+    width: 33%;
+    float: left;
+    height: 55%;
+}
+.tekst_linia2{
+    width: 35%;
+    float: left;
+    height: 55%;
+}
+.tekst_linia3{
+    width: 32%;
+    float: left;
+    height: 55%;
+}
+#duza_litera{
+    width:58%;
+    height:20%;
+    float: left;
+    display:flex;
+    
+    align-items: center;
+    font-size: 6.2rem;
+    clear: both;
+}
+#told{
+    margin-top: 0.3rem;
+    width: 42%;
+    height:20%;
+    float: left;
+    margin-left: -0.75rem;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    line-height: 0.9rem;
+}
+#pierwsza_linia1{
+    width: 91%;
+    height:28%;
+    margin-top: 0.3rem;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    font-size:0.8rem ;
+    line-height: 0.9rem;
+    clear: both;
 
-#napis_pod_zdjeciem{
-height: 15%;
-width: 100%;
+}
+#pierwsza_linia2{
+    width: 91%;
+    height:48%;
+    margin-top: 0.3rem;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    font-size:0.8rem ;
+    line-height: 0.9rem;
+
+}
+#druga_linia1{
+    width: 85%;
+    height:37%;
+    float: left;
+    margin-top: 0.55rem;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    line-height: 0.9rem;
+    clear: both;
+}
+#druga_linia2{
+    width: 85%;
+    height:53%;
+    float: left;
+    margin-top: 0.52rem;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    line-height: 0.9rem;
+}
+#trzecia_linia1{
+    width: 90%;
+    margin-top: 0.55rem;
+    height:64%;
+    float: left;
+    margin-left: -0.65rem;;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    line-height: 0.9rem;
+    clear: both;
+    margin-bottom: 0.5rem;
+}
+#trzecia_linia2{
+    width: 84%;
+    margin-top: 0.9rem;
+    height:20%;
+    float: left;
+    margin-left: -0.65rem;;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    line-height: 0.9rem;
+    clear: both;
+}
+#ipsum{
+    width: 83.5%;
+    height: 7%;
+    display: flex;
+    font-size:1.38rem;
+    text-align: right;
+    justify-content: flex-end;
+}
+#baner_dół1{
+    height: 30%;
+    width: 100%;
+    clear: both;
+    border: 0.2rem solid #503723;
 }
