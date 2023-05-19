@@ -108,7 +108,7 @@ float: left;
 }
 #zdjecie1{
 
-height: 72%;
+height: 74%;
 width: 100%;
 background-image: url(przybory-kuchenne.png);
 background-size: 97% 98%;
@@ -216,9 +216,9 @@ clear: both;
 
 }
 #pierwsza_linia2{
+    margin-top: -1rem;
     width: 91%;
     height:48%;
-    margin-top: 0.3rem;
     display: flex;
     text-align: justify;
     align-items: center;
@@ -238,10 +238,10 @@ clear: both;
     clear: both;
 }
 #druga_linia2{
+    margin-top: -0.8rem;
     width: 85%;
     height:53%;
     float: left;
-    margin-top: 0.52rem;
     font-size:0.8rem ;
     display: flex;
     text-align: justify;
