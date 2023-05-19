@@ -53,20 +53,20 @@ body {
     width: 46vw;
 }
 .data-baner-left{
-    height: 2.5vh;
+    height: 65%;
     float: left;
     width:25%;
     
     text-align: left;
 }
 .data-baner-mid{
-    height: 2.5vh;
+    height: 65%;
     float: left;
     width:50%;
     text-align: center;
 }
 .data-baner-right{
-    height: 2.5vh;
+    height: 65%;
     float: left;
     width:25%;
     text-align: right;
@@ -74,13 +74,14 @@ body {
 .linia{
     border-top: 0.2rem solid #503723;
     clear: both;
-    width: 46vw;
+    width: 100%;
     font-weight:lighter;
     
 }
 .data_baner{
-height: 2.5vh;
-margin-top:2vh;
+height: 2.5%;
+width: 100%;
+margin-top:2%;
 display: inline-block;
 
 align-items:flex-start;
