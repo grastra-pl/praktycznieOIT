@@ -26,17 +26,18 @@ body {
     flex-direction: row;
     font-size: 1rem;
     text-align: center;
-    min-height: 96vh; /* Ustalamy minimalną wysokość dla #czesc1 */
+    min-height: 96%; /* Ustalamy minimalną wysokość dla #czesc1 */
   }
   #czesc2 {
     width: 46vw;
     color: #503723;
     flex: 1;
-    margin-top: 1vh;
+    margin-top: 1%;
+    margin-right: 2vw;
     margin-left: 2vw;
     font-size: 1rem;
     text-align: center;
-    min-height: 96vh; /* Ustalamy minimalną wysokość dla #czesc2 */
+    min-height: 96%; /* Ustalamy minimalną wysokość dla #czesc2 */
   }
 #header{
     font-size: 5rem;
@@ -49,7 +50,7 @@ body {
     align-items: center;
     justify-content: center;
     word-spacing: 0.5rem;
-    height: 10vh;
+    height: 10%;
     width: 46vw;
 }
 .data-baner-left{
@@ -425,4 +426,92 @@ order: 2;
   clear: both;
   background-position: top;
   
+}
+#czesc2-gora{
+    width: 100%;
+    height:63.8%;
+    clear: both;
+    margin-bottom: 2.8%;
+}
+#czesc2-dol{
+    margin-top: -2%;
+    width: 100%;
+    height: 48.7%;
+}
+#czesc2-dol-lewo{
+height: 100%;
+width: 54%;
+margin-right: 3%;
+display: flex;
+flex-direction: row;
+float: left;
+}
+#czesc2-dol-prawo{
+height: 100%;
+width: 43%;
+display: flex;
+float: left;
+flex-direction: column;
+}
+#czesc2-dol-lewo1, #czesc2-dol-lewo2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+    margin-right: 3%;
+}
+#czesc2-dol-lewo3{
+    height: 100%;
+    display: flex;
+    width: 32%;
+    flex-direction: column; 
+}
+#czesc2-dol-prawo1{
+width: 100%;
+height: 83%;
+display: flex;
+}
+#czesc2-dol-prawo2{
+width: 100%;
+height: 17%;
+display: flex;    
+}
+#czesc2-gora-lewo{
+height: 100%;
+width: 54%;
+margin-right: 3%;
+display: flex;
+float: left;
+flex-direction: column;
+}
+#czesc2-gora-prawo{
+    height: 100%;
+    width: 43%;
+    display: flex;
+    float: left; 
+    flex-direction: row;
+}
+#czesc2-gl-gora{
+height: 72%;
+width: 100%;
+display: flex;
+
+}
+#czesc2-gl-dol{
+    height: 28%;
+width: 100%;
+display: flex;
+flex-direction:column ;
+}
+#czesc2-gp-lewo{
+height: 100%;
+width: 50%;
+display: flex;
+flex-direction: column;
+}
+#czesc2-gp-prawo{
+height: 100%;
+width: 50%;
+display: flex;
+flex-direction: column;
 }
