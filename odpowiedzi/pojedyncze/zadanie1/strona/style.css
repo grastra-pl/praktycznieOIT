@@ -97,18 +97,18 @@ align-items:flex-start;
 }
 #srodek-lewo{
 width:50%;
-height: 80%;
+height: 62%;
 float: left;
 clear: both;
 }
 #srodek-prawo{
 width:50%;
-height: 80%;
+height: 62%;
 float: left;
 }
 #zdjecie1{
 
-height: 82%;
+height: 72%;
 width: 100%;
 background-image: url(przybory-kuchenne.png);
 background-size: 97% 98%;
@@ -174,7 +174,7 @@ clear: both;
 .tekst_linia2{
     width: 35%;
     float: left;
-    height: 55%;
+    height: 60%;
 }
 .tekst_linia3{
     width: 32%;
@@ -258,12 +258,11 @@ clear: both;
     text-align: justify;
     line-height: 0.9rem;
     clear: both;
-    margin-bottom: 0.5rem;
 }
 #trzecia_linia2{
     width: 84%;
-    margin-top: 0.9rem;
-    height:20%;
+    margin-top: -1rem;
+    height:15%;
     float: left;
     margin-left: -0.65rem;;
     font-size:0.8rem ;
@@ -271,18 +270,159 @@ clear: both;
     text-align: justify;
     line-height: 0.9rem;
     clear: both;
+    margin-bottom: 0.75rem;
 }
 #ipsum{
     width: 83.5%;
+   
     height: 7%;
+
     display: flex;
     font-size:1.38rem;
     text-align: right;
     justify-content: flex-end;
 }
 #baner_dół1{
-    height: 30%;
+    margin-top: -12%;
+    height: 40%;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 2%;
+    clear: both;
+    border: 0.2rem solid #503723 ;
+}
+#lewa-czesc{
+width:35% ;
+height: 100%;
+display: flex;
+border-right: 0.2rem solid #503723;
+box-sizing: border-box;
+float: left;
+flex-direction: column;
+}
+#prawa-czesc{
+height: 100%;
+width:65% ;
+float: left;
+display: flex;
+flex-direction: column;
+}
+#prawa-czesc1{
+    display: flex;
+    height: 29.5%;
+    width: 100%;
+    flex-direction: column;
+    order: 1;
+}
+#prawa-czesc2{
+height: 70.5%;
+width: 100%;
+display: flex;
+order: 2;
+}
+#prawa-czesc-gora{
+    height: 42%;
+    width: 100%;
+    justify-content: center;
+    padding-bottom:2% ;
+    display: flex;
+    align-items: flex-end;
+    color: #ead3b4;
+    background-color: #503723;
+    font-size: 2.7rem;
+    white-space: nowrap;
+    letter-spacing: 0.15rem;
+
+}
+#lewa-czesc-gora{
+    height: 18%;
+    padding-top:3%;
+    width: 100%;
+    display: flex;
+    padding-left: 7.5%;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: left;
+
+    
+}
+#lewa-czesc-srodek{
+    height: 13%;
+    padding-left: 7.5%;
+    width: 87.5%;
+    padding-right: 5%;
+    line-height: 0.9rem;
+    font-size:0.8rem ;
+    text-align: justify;
+
+}
+#lewa-czesc-dol{
+    height: 63%;
+    padding-left: 7.5%;
+    width: 87.5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+    display:inline-flex;
+    background-repeat: no-repeat;
+    background-size: 88% 97%;
+    background-position:center;
+    background-image: url(szklo.png);
+}
+#prawa-czesc-srodek{
+    height: 55%;
+    width: 95%;
+    padding-top: 2%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    font-size:1.3rem;
+    text-align:justify;
+}
+
+#dol-lewo{
+    width: 20%;
+    height: 100%;
+    line-height: 0.9rem;
+    font-size:0.8rem ;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    float: left;
+    text-align: justify;
+}
+#dol-srodek{
+    height: 100%;
+    width: 20%;
+    padding-right: 2.5%;
+    line-height: 0.9rem;
+    font-size:0.8rem ;
+    float: left;
+    text-align: justify;
+
+}
+#dol-prawo{
+    width: 60%;
+    height: 100%;
+    padding-left: 1.5%;
+    padding-right: 2.5%;
+    float: left;
+}
+#dol-prawo-gora{
+    
+    padding-bottom: 2%;
+    height: 14%;
+    text-align: justify;
     width: 100%;
     clear: both;
-    border: 0.2rem solid #503723;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+}
+#dol-prawo-dol{
+    height: 80%;
+    width: 100%;
+    background-image: url("owocki.png");
+  background-size: 100% 93%; 
+  background-repeat: no-repeat;
+  clear: both;
+  background-position: top;
+  
 }
