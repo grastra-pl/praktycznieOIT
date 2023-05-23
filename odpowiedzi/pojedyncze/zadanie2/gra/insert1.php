@@ -1,4 +1,7 @@
 <?php 
+header('Access-Control-Allow-Origin: *');
+
+header('Access-Control-Allow-Methods: GET, POST');
  $conn=mysqli_connect("localhost","root","","database1");
  $query= mysqli_query($conn,"SELECT max(id) as 'last_id' FROM score");
  $row = mysqli_fetch_array($query);
