@@ -1,27 +1,11 @@
 <?php
-if (isset($_POST['id'])) {
-    $dsn = 'mysql:host=localhost;dbname=database';
-    $username = 'username';
-    $password = 'password';
+$jsonData = file_get_contents('php://input');
+if ($jsonData) {
+    $data = json_decode($jsonData, true);
 
-    try {
-        $pdo = new PDO($dsn, $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
-        // Przygotowanie i wykonanie zapytania SQL
-        $query = "SELECT :id * 2 AS result";
-        $stmt = $pdo->prepare($query);
-        $stmt->bindParam(':id', $_POST['id']);
-        $stmt->execute();
+    $id = $data['id'];
 
-        // Pobranie wyniku zapytania
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $result = $id * 2;
 
-        // Zwrócenie wyniku jako odpowiedź
-        echo $result['result'];
-    } catch (PDOException $e) {
-        echo 'Wystąpił błąd: ' . $e->getMessage();
-    }
-} else {
-    echo 'Brak przesłanej zmiennej "id".';
+    echo $result;
 }
