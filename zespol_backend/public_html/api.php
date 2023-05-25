@@ -1,3 +1,3 @@
 <?php
 
-die('Tu jest miejsce na utworzenie Waszej aplikacji');
+die('Tu jest miejsce na utworzenie Waszej aplikacji backendowej');
