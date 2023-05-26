@@ -26,7 +26,7 @@ async function getData(url = '') {
         response => response.text()
     ).then(
         response => {
-            parsedResponse = JSON.parse(response);
+            parsedResponse = JSON.parse([response]);
     });
     return parsedResponse;
 }
@@ -36,3 +36,13 @@ function print(text) {
     const app = document.getElementById('app');
     app.innerHTML += `<p>${text}</p>`;
 }
+
+function createBtn(text){
+    const app = document.getElementById('app');
+    app.innerHTML += '<button onclick="checkNumbers()" id="btn">' + text + '</button>';
+}
+
+  function makeInput(id, placeholder, typee){
+    const parent = document.getElementById('app');
+    parent.innerHTML += '<label for="' + id + '">Zgadnij jaka jest najwyższa wartość na backendzie : </label><input type="' + typee + '" placeholder="' + placeholder + '" id="' + id + '"> ';
+  }

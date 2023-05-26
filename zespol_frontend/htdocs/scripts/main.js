@@ -1,5 +1,5 @@
-requirejs(['lib/framework', 'app/config', 'app/api'],
+requirejs(['lib/framework', 'app/api'],
 function () {
-    print(`Tutaj będzie frontend,
-        backend z którym trzeba się połączyć to <a href='${serverAddress}'>${serverAddress}</a>`);
+    makeInput("ourNumber","wpisz swoja liczbe", "text");
+    createBtn("Sprawdz");   
 });
