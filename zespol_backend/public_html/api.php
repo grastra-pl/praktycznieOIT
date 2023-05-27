@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if(!$data)
     {
-    die("Send error");
+    die('Send error');
     }
     
     if (!is_int($data['raw_value'])) 
