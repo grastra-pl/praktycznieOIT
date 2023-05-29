@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bree+Serif&display=swap');
+body {
+    background-color: #ead3b4;
+    font-family: Bree Serif ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Ustalamy przewijanie w osi Y dla całej strony */
+}
+    
+  
+  #calosc {
+    margin: 2% 2% ;
+    display: flex;
+    
+    flex-direction: row; /* Ustawiamy układ w kolumnie */
+     /* Rozciągamy #calosc, aby wypełnił dostępną przestrzeń */
+    
+    
+}
+  
+  #czesc1 {
+    width: 46vw;
+    color: #503723;
+    margin-right: 2vw;
+    flex-direction: row;
+    font-size: 1rem;
+    text-align: center;
+    min-height: 96%; /* Ustalamy minimalną wysokość dla #czesc1 */
+  }
+  #czesc2 {
+    width: 46vw;
+    color: #503723;
+    flex: 1;
+    margin-top: 1%;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    font-size: 1rem;
+    text-align: center;
+    min-height: 96%; /* Ustalamy minimalną wysokość dla #czesc2 */
+  }
+#header{
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    font-stretch: ultra-expanded;
+    white-space: nowrap;
+    display:flex;
+    font-family: Alfa Slab One;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 0.5rem;
+    height: 10%;
+    width: 46vw;
+}
+.data-baner-left{
+    height: 65%;
+    float: left;
+    width:25%;
+    
+    text-align: left;
+}
+.data-baner-mid{
+    height: 65%;
+    float: left;
+    width:50%;
+    text-align: center;
+}
+.data-baner-right{
+    height: 65%;
+    float: left;
+    width:25%;
+    text-align: right;
+}
+.linia{
+    border-top: 0.2rem solid #503723;
+    clear: both;
+    width: 100%;
+    font-weight:lighter;
+    
+}
+.data_baner{
+height: 2.5%;
+width: 100%;
+margin-top:2%;
+display: inline-block;
+
+align-items:flex-start;
+}
+#duzy-napis{
+    clear: both;
+    width:100%;
+    
+    margin-top: -2vh;
+    font-size: 6.2rem;
+    height: 7vh;
+    white-space: nowrap;
+    margin-bottom: 8%;
+}
+#srodek-lewo{
+width:50%;
+height: 62%;
+float: left;
+clear: both;
+}
+#srodek-prawo{
+width:50%;
+height: 62%;
+float: left;
+}
+#zdjecie1{
+
+height: 74%;
+width: 100%;
+background-image: url(przybory-kuchenne.png);
+background-size: 97% 98%;
+display: flex;
+align-items: flex-end;
+background-position: top right;
+background-repeat: no-repeat;
+clear: both;
+}
+#pod_duzym_obrazkiem{
+    width: 97.3%;
+    height: 18%;
+    margin-top:-0.3rem;
+    text-align: justify;
+    font-size:1.1rem ;
+    display: flex;
+    line-height: 1.2rem;
+    margin-left:0.75rem;
+}
+
+#world{
+    margin-top: -12%;
+    display: flex;
+    text-align: left;
+    width:70%;
+    font-size: 6.2rem;
+    white-space: nowrap;
+}
+.china{
+    text-align: left;
+    clear: both;
+    width:80%;
+    margin-top: 1rem;
+    line-height: 2.6rem;
+    font-stretch: narrower;
+    font-size: 2.87rem;
+    display: flex;
+}
+.the{
+    font-size: 1.38rem;
+}
+#elephant{
+    margin-top:1.55rem;
+    clear: both;
+    width:80%;
+    white-space: nowrap;
+    text-align: left;
+    display:flex;
+}
+#linia_mała{
+    width:65%;
+    height: 0.2rem;
+    margin-top: 1.37rem;
+    border-top: solid 0.2rem #503723;
+    margin-left: 2.65rem;
+    
+}
+.tekst_linia1{
+    width: 33%;
+    float: left;
+    height: 55%;
+}
+.tekst_linia2{
+    width: 35%;
+    float: left;
+    height: 60%;
+}
+.tekst_linia3{
+    width: 32%;
+    float: left;
+    height: 55%;
+}
+#duza_litera{
+    width:58%;
+    height:20%;
+    float: left;
+    display:flex;
+    
+    align-items: center;
+    font-size: 6.2rem;
+    clear: both;
+}
+#told{
+    margin-top: 0.3rem;
+    width: 42%;
+    height:20%;
+    float: left;
+    margin-left: -0.75rem;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    line-height: 0.9rem;
+}
+#pierwsza_linia1{
+    width: 91%;
+    height:28%;
+    margin-top: 0.3rem;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    font-size:0.8rem ;
+    line-height: 0.9rem;
+    clear: both;
+
+}
+#pierwsza_linia2{
+    margin-top: -1rem;
+    width: 91%;
+    height:48%;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    font-size:0.8rem ;
+    line-height: 0.9rem;
+
+}
+#druga_linia1{
+    width: 85%;
+    height:37%;
+    float: left;
+    margin-top: 0.55rem;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    line-height: 0.9rem;
+    clear: both;
+}
+#druga_linia2{
+    margin-top: -0.8rem;
+    width: 85%;
+    height:53%;
+    float: left;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    line-height: 0.9rem;
+}
+#trzecia_linia1{
+    width: 90%;
+    margin-top: 0.55rem;
+    height:64%;
+    float: left;
+    margin-left: -0.65rem;;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    line-height: 0.9rem;
+    clear: both;
+}
+#trzecia_linia2{
+    width: 84%;
+    margin-top: -0.1rem;
+    height:15%;
+    float: left;
+    margin-left: -0.65rem;;
+    font-size:0.8rem ;
+    display: flex;
+    text-align: justify;
+    line-height: 0.9rem;
+    clear: both;
+
+}
+#ipsum{
+    margin-top:30rem;
+    width: 83.5%;
+    height: 7%;
+
+    display: flex;
+    font-size:1.38rem;
+    text-align: right;
+    justify-content: flex-end;
+}
+#baner_dół1{
+    margin-top: -12%;
+    height: 40%;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 2%;
+    clear: both;
+    border: 0.2rem solid #503723 ;
+}
+#lewa-czesc{
+width:35% ;
+height: 100%;
+display: flex;
+border-right: 0.2rem solid #503723;
+box-sizing: border-box;
+float: left;
+flex-direction: column;
+}
+#prawa-czesc{
+height: 100%;
+width:65% ;
+float: left;
+display: flex;
+flex-direction: column;
+}
+#prawa-czesc1{
+    display: flex;
+    height: 29.5%;
+    width: 100%;
+    flex-direction: column;
+    order: 1;
+}
+#prawa-czesc2{
+height: 70.5%;
+width: 100%;
+display: flex;
+order: 2;
+}
+#prawa-czesc-gora{
+    height: 42%;
+    width: 100%;
+    justify-content: center;
+    padding-bottom:2% ;
+    display: flex;
+    align-items: flex-end;
+    color: #ead3b4;
+    background-color: #503723;
+    font-size: 2.7rem;
+    white-space: nowrap;
+    letter-spacing: 0.15rem;
+
+}
+#lewa-czesc-gora{
+    height: 18%;
+    padding-top:3%;
+    width: 100%;
+    display: flex;
+    padding-left: 7.5%;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: left;
+
+    
+}
+#lewa-czesc-srodek{
+    height: 13%;
+    padding-left: 7.5%;
+    width: 87.5%;
+    padding-right: 5%;
+    line-height: 0.9rem;
+    font-size:0.8rem ;
+    text-align: justify;
+
+}
+#lewa-czesc-dol{
+    height: 63%;
+    padding-left: 7.5%;
+    width: 87.5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+    display:inline-flex;
+    background-repeat: no-repeat;
+    background-size: 88% 97%;
+    background-position:center;
+    background-image: url(szklo.png);
+}
+#prawa-czesc-srodek{
+    height: 55%;
+    width: 95%;
+    padding-top: 2%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    font-size:1.3rem;
+    text-align:justify;
+}
+
+#dol-lewo{
+    width: 20%;
+    height: 100%;
+    line-height: 0.9rem;
+    font-size:0.8rem ;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    float: left;
+    text-align: justify;
+}
+#dol-srodek{
+    height: 100%;
+    width: 20%;
+    padding-right: 2.5%;
+    line-height: 0.9rem;
+    font-size:0.8rem ;
+    float: left;
+    text-align: justify;
+
+}
+#dol-prawo{
+    width: 60%;
+    height: 100%;
+    padding-left: 1.5%;
+    padding-right: 2.5%;
+    float: left;
+}
+#dol-prawo-gora{
+    
+    padding-bottom: 2%;
+    height: 14%;
+    text-align: justify;
+    width: 100%;
+    clear: both;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+}
+#dol-prawo-dol{
+    height: 80%;
+    width: 100%;
+    background-image: url("owocki.png");
+  background-size: 100% 93%; 
+  background-repeat: no-repeat;
+  clear: both;
+  background-position: top;
+  
+}
+#czesc2-gora{
+    width: 100%;
+    height:65%;
+    clear: both;
+    margin-bottom: 2.8%;
+}
+#czesc2-dol{
+    margin-top: -2%;
+    width: 100%;
+    height: 47.5%;
+}
+#czesc2-dol-lewo{
+height: 100%;
+width: 54%;
+margin-right: 3%;
+display: flex;
+flex-direction: row;
+float: left;
+}
+#czesc2-dol-prawo{
+height: 100%;
+width: 43%;
+display: flex;
+float: left;
+flex-direction: column;
+}
+#czesc2-dol-lewo1, #czesc2-dol-lewo2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    text-align: justify;
+    margin-right: 3%;
+}
+#czesc2-dol-lewo3{
+    height: 100%;
+    display: flex;
+    width: 32%;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    text-align: justify;
+    flex-direction: column; 
+}
+#czesc2-dol-prawo1{
+width: 100%;
+height: 89%;
+background-image: url(badmington.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100% 100%;
+display: flex;
+}
+#czesc2-dol-prawo2{
+width: 100%;
+height: 8%;
+margin-top: 3%;
+font-size:0.8rem;
+text-align: justify;
+line-height: 0.9rem;
+display: flex;    
+}
+#czesc2-gora-lewo{
+height: 100%;
+width: 54%;
+margin-right: 3%;
+display: flex;
+float: left;
+flex-direction: column;
+}
+#czesc2-gora-prawo{
+    height: 100%;
+    width: 43%;
+    display: flex;
+    float: left; 
+    flex-direction: row;
+}
+#czesc2-gl-gora{
+height: 61%;
+width: 100%;
+display: flex;
+flex-direction: row;
+
+}
+#czesc2-gl-dol{
+    height: 28%;
+width: 100%;
+display: flex;
+font-size: 0.8rem;
+line-height: 0.9rem;
+text-align: justify;
+flex-direction:column ;
+}
+#czesc2-gp-lewo{
+height: 100%;
+width: 50%;
+padding-right:5%;
+display: flex;
+flex-direction: column;
+}
+#czesc2-gp-prawo{
+    padding-top:10%;
+height: 100%;
+width: 50%;
+display: flex;
+flex-direction: column;
+}
+#czesc2-gl-pasek1{
+width: 29%;
+height: 100%;
+font-size:0.8rem;
+line-height: 0.9rem;
+}
+#czesc2-gl-pasek2{
+width: 71%;
+height: 97.5%;
+background-position: top;
+background-image: url(gosciunakrzesle.png);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+
+    
+}
+#czesc2-gora-header{
+    height: 8%;
+    margin-bottom: 5%;
+    margin-top:2%;
+width: 100%;
+display: flex;
+font-size: 3.5rem;
+white-space: nowrap;
+word-spacing: 1.56rem;
+}
+#t9-dol{
+height: 20%;
+width: 100%;
+}
+#t10-dol{
+    height: 65%;
+    width: 100%;
+}
+#t11-dol{
+    margin-top:2.9rem;
+    height: 15%;
+    width: 100%;
+}
+#t8{
+   height: 25%;
+   margin-top:-0.3rem;
+    width: 100%;
+}
+#t7{
+height: 45%;
+width: 100%;
+}
+#t6{
+    width: 100%;
+    height: 30%;
+}
+#t5{
+height: 35%;
+width: 100%;
+}
+#t4{
+height: 45%;
+width: 100%;
+}
+#t3
+{
+width: 100%;
+height: 20%;
+display: flex;
+flex-direction: row;
+}
+#t3-duza-litera{
+height: 50%;
+margin-left:-0.5rem;
+align-self: center;
+justify-content: flex-start;
+align-items: flex-start;
+width: 35%;
+display: flex;
+font-size:7.5rem;
+}
+#t3-tekst{
+    margin-left:1.2rem;
+display: flex;
+height: 100%;
+width: 65%;
+}
+#tekst-obrazek1{
+    width: 30%;
+    height: 100%;
+    margin-right: 3%;
+}
+#tekst-obrazek2{
+    width: 36%;
+    height: 100%;
+    margin-right: 5%;
+
+}
+#tekst-obrazek3{
+    width: 36%;
+    margin-left: 2%;
+    height: 100%;
+    margin-left: 2%;
+}
+#czesc2-gl-dol1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+#czesc2-gl-dol2{
+width: 100%;
+height: 50%;
+display: flex;
+flex-direction: column;
+}
+#gl-dol2-gora{
+width: 100%;
+margin-top: 3%;
+display: flex;
+height: 50%;
+background-color:#503723 ;
+font-size:3rem;
+text-align: center;
+justify-content: center;
+align-items: center;
+padding-bottom:0.5rem;
+color: #ead3b4;
+}
+#gl-dol2-dol{
+width: 100%;
+display: flex;
+height: 50%;
+}
+#tekst-gora1{
+    margin-top:3rem;
+width: 100%;
+height:20%;
+display: flex;
+box-sizing:border-box;
+flex-direction: column;
+border: solid #503723 0.2rem;
+}
+#tekst-gora1a{
+height: 50%;
+width: 90%;
+float: left;
+font-size:0.8rem;
+line-height: 0.9rem;
+line-height: 1.3rem;
+font-size: 1.3rem;
+padding:5%;
+
+
+text-align: justify;
+display: flex;
+}
+#tekst-gora1b{
+height: 50%;
+text-align: justify;
+padding:5%;
+font-size:0.8rem;
+line-height: 0.9rem;
+display: flex;
+
+width: 85%;
+float: left;
+}
+#tekst-gora2{
+    margin-top: 10%;
+text-align: justify;
+width: 100%;
+    height: 30%;
+    font-size:0.8rem;
+    line-height: 0.9rem;
+}
+#tekst-gora3{
+text-align: justify;
+width: 100%;
+    height: 20%;
+    font-size:0.8rem;
+    line-height: 0.9rem;
+}
+#tekst-gora4{
+    width: 100%;
+    height: 25%;
+    text-align: justify;
+    font-size:0.8rem;
+    line-height: 0.9rem;
+}
+#tekst-lewo1{
+height: 15%;
+width: 95%;
+float: left;
+margin-bottom:5%;
+font-size:0.6rem;
+padding-right: 5%;
+text-align: justify;
+clear: both;
+margin-bottom: 15%;
+
+}
+#tekst-lewo2{ 
+width: 100%;
+height: 15%;
+clear: both;
+text-align: justify;
+
+}
+#tekst-lewo2a{
+    height: 100%;
+    width: 60%;
+    margin-top:1rem;
+    margin-bottom:-5rem;
+    font-size:6.2rem;
+    float: left;
+}
+#tekst-lewo2b{
+    height: 100%;
+    width: 40%;
+    margin-top:-0.5rem;
+    margin-left:-0.7rem;
+    float: left;
+
+}
+#tekst-lewo3{
+width: 92%;  
+height: 45%;
+float: left;
+text-align: justify;
+
+}
+#tekst-lewo4{
+width: 92%;
+float: left;
+text-align: justify;
+height: 25%;
+}
+#czesc2-tekst-prawo1{
+height: 15%;
+width: 100%;
+font-size:2rem;
+text-align: left;
+}
+#czesc2-tekst-prawo2{
+height: 7.5%;
+width: 100%;
+font-size:1.2rem;
+text-align: left;
+}
+#czesc2-tekst-prawo3{
+    width: 100%;
+    margin-top: 0.2rem;
+    height: 18.5%;
+    text-align: justify;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+}
+#czesc2-tekst-prawo4{
+    width: 100%;
+    height: 20%;
+    font-size: 0.8rem;
+    text-align: justify;
+    line-height: 0.9rem;
+}
+#czesc2-tekst-prawo5{
+    width: 100%;
+    height: 6%;
+    text-align: justify;
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+}
+#czesc2-tekst-prawo6{
+    width: 100%;
+    text-align: justify;
+    height: 23%;
+    padding-bottom:4%;
+    background-image: url(pieseł.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

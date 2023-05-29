@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zgadywanie liczb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="baner"><h2>Zgadywanie liczb - gra</h2></div>
+    <div id="levels">
+        <button onclick="level('easy')">Łatwe(2cyfry)</button>
+        <button onclick="level('normal')">Normalne(3cyfry)</button>
+        <button onclick="level('hard')">Trudne(4cyfry)</button>
+    </div>
+    <div id="start" hidden>
+        <button onclick="start()">start</button>
+    </div>
+    <div id="container" hidden>
+
+            <input id="number" type="number">
+            <button onclick="check()">Sprawdź</button>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
