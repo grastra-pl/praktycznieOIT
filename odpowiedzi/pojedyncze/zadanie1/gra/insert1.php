@@ -10,7 +10,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Ustawienie trybu zgłaszania błędów dla obiektu PDO
     
-    $query = $conn->prepare("INSERT INTO `score` (`creation_time`, `modification_time`, `deleted`, `game_id`, `player_id`, `value`) VALUES ('0000-00-00 00:00:00', CURRENT_TIMESTAMP(), 0, 1, 1, 100)");
+    $query = $conn->prepare("INSERT INTO `score` (`id`,`creation_time`, `modification_time`, `deleted`, `game_id`, `player_id`, `value`) VALUES (NULL,'0000-00-00 00:00:00', CURRENT_TIMESTAMP(), 0, 1, 1, 100)");
     // Przygotowanie zapytania SQL do wstawienia nowego rekordu do tabeli "score"
     $query->execute();
     // Wykonanie zapytania SQL

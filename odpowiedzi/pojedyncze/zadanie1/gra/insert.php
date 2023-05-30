@@ -8,7 +8,7 @@ try {
     $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $query = $conn->query("SELECT * FROM score");
+    $query = $conn->query("SELECT * FROM `score` ORDER BY `id` DESC");
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
     // Pobranie wyników zapytania do tablicy asocjacyjnej
 
