@@ -27,6 +27,14 @@ By ściągnąć to repozytorium, którego ten opis jest częścią, wpisz komend
 
 ```git clone git@github.com:grastra-pl/praktycznieOIT.git```
 
+Jeśli w tym momencie pojawi się komunikat podobny do poniższego:
+
+```The authenticity of host 'github.com (140.82.113.4)' can't be established.```
+
+należy dodać github do znanych hostów, na przykład tak:
+
+```ssh-keyscan github.com >> ~/.ssh/known_hosts```
+
 By zacząć pracować na tym repozytorium, pierwsze co powinieneś zrobić, to utworzyć własną gałąź drzewa
 zmian, na której będziesz commitować swoje zmiany.
 Można to zrobić wydając dwie komendy, jedną do utworzenia gałęzi (brancha), drugą, do przełączenia się
