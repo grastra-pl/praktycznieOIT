@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Praktyki, przekazywanie danych na backend</title>
+</head>
+<body>
+	<section>
+		<h1>Podstawy backendu. Zapisywanie wyników</h1>
+
+		<select name='score' id='score'>
+			<option value='win'>Wygrana</option>
+			<option value='defeat'>Przegrana</option>	
+		</select>
+
+		<button id='buttonSend'>Wyślij</button>
+
+	</section>
+
+<script>
+
+const scoreDropdown = document.getElementById('score')
+const button = document.getElementById('buttonSend');
+
+button.addEventListener('click', () => {
+	const score  = scoreDropdown.value;
+
+	const costam = postData('backend.php', {
+		score
+	});
+
+	costam.then((test) => {
+		alert(test.text);
+	});
+});
+
+async function postData(url = '', data = {}) {
+
+    const response = await fetch(url, {
+        method: 'POST',
+        mode: 'same-origin',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data)
+    });
+    return response.json();
+}
+
+</script>
+</body>
+</html>
