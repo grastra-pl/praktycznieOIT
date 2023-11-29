@@ -14,10 +14,11 @@ class CurrentDayController extends AbstractController
         return $this->render('current_day/index.html.twig', [
             'controller_name' => 'TestController',
             'date_time' => getdate(),
+            'hello_message' => "Welcome to Symfony!!!"
         ]);
     }
 
-    #[Route('/currentDayJson', name: 'app_current_day_json', methods: ['GET'])]
+    #[Route('/currentDay/json', name: 'app_current_day_json', methods: ['GET'])]
     public function indexJson(): Response
     {
         return $this->json(getdate());

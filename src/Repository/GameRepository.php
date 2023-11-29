@@ -61,5 +61,4 @@ class GameRepository extends ServiceEntityRepository
            ->getQuery()
            ->getOneOrNullResult();
     }
-
 }

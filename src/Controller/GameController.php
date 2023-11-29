@@ -9,7 +9,7 @@ use App\Repository\GameRepository;
 
 class GameController extends AbstractController
 {
-    #[Route('/games', name: 'app_games', methods: ['GET'])]
+    #[Route('/allGames', name: 'app_games', methods: ['GET'])]
     public function getAll(GameRepository $gameRepository): Response
     {
         $res = $gameRepository->findAll();
@@ -17,12 +17,11 @@ class GameController extends AbstractController
         return $this->json($res);
     }
 
-    #[Route('/games/{slug}', name: 'app_games', methods: ['GET'])]
-    public function getById(int $slug, GameRepository $gameRepository): Response
+    #[Route('/games/{id}', name: 'app_games_by_id', methods: ['GET'])]
+    public function getById(int $id, GameRepository $gameRepository): Response
     {
-        $res = $gameRepository->findById($slug);
+        $res = $gameRepository->findById($id);
 
         return $this->json($res);
     }
-
 }
