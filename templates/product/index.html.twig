@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Form!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.div-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+	</style>
+    
+    {# Używamy wbudowanej w Twiga funkcji do sprawdzenia, czy zmienna istnieje. #}
+    {# Oznacza to, że poniższy div z <h2></h2> pojawi się tylko wtedy, jeżeli serwer zwróci zmienną o nazwie 'message'. #}
+    {# W tym przypadku jest to np. miejsce na komunikat o pomyślnym dodaniu produktu, lub o błędzie #}
+	{% if message is defined %}
+		<div class="div-wrapper">
+			<h2>{{message}}</h2>
+		</div>
+
+	{% endif %}
+
+	<div class="div-wrapper ">
+		<form action="{{path('app_product_create')}}" method="POST">
+			<label for="name">Nazwa produktu:</label><br>
+			<input type="text" id="name" name="name" placeholder="Dr Pepper"><br>
+			<label for="price">Cena (w zł):</label><br>
+			<input type="number" id="price" name="price" placeholder="100"><br><br>
+			<input type="submit" value="Wyślij!">
+		</form>
+
+
+	</div>
+{% endblock %}

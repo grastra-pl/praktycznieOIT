@@ -8,7 +8,6 @@
 ## Jak to jeść
 
 1. Budowa teorii przez praktykę
-2. 
 
 ## Parę słów o Symfony
 
@@ -42,9 +41,12 @@
 > `symfony server:start`
 7. Przejdź do `127.0.0.1:8000` w przeglądarce. Wszystko gra?
    
-   
+
 ## Checklista do opanowania
 - Na czym polega podział aplikacji na "model", "controller" i "view"?
 - Co to jest Composer?
 - Gdzie można podać dane dostępu do bazy danych w Symfony? Co jeszcze może znaleźć się w tamtym pliku?
 - Jak uruchomić konsolę symfony i co można za jej pomocą wykonać?
+
+## Kolejne zagadnienie
+
