@@ -10,6 +10,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
+
+
 class ProductController extends AbstractController
 {
 
@@ -18,10 +20,19 @@ class ProductController extends AbstractController
      * nie robimy tu nic, poza renderowaniem templatki Twiga z tym formularzem.
      */
     #[Route('/product', name: 'app_product', methods: ['GET'])]
-    public function index(): Response
+    public function index(ProductRepository $productRepository): Response
     {
-        return $this->render('product/index.html.twig');
+        return $this->render('product/index.html.twig',[
+            'product_array' => $productRepository->findAll(),
+        ]);
     }
+
+    #[Route('/product/search', name: 'app_product_search', methods: ['GET'])]
+    public function search(): Response
+    {
+        return $this->render('product/search.html.twig');
+    }
+
 
     /**
      * W tym roucie zmieniamy akceptowalne methody z GET na POST, a zatem możemy mieć
@@ -40,6 +51,7 @@ class ProductController extends AbstractController
         $formData = $request->request;
 
         $productName = $formData->get('name');
+        $productDescription = $formData->get('description');
 
         //Liczby z formularza dalej dostaniemy w postaci tekstu(string).
         //Musimy je przekształcić na faktyczne liczby! (integer)
@@ -54,6 +66,7 @@ class ProductController extends AbstractController
         //Zauważcie, że nie musimy tu ręcznie ustawiać ID produktu. 
         $product = new Product();
         $product->setName($productName);
+        $product->setDescription($productDescription);
         $product->setPrice($productPrice);
 
         $entityManager->persist($product);
@@ -61,7 +74,15 @@ class ProductController extends AbstractController
         $entityManager->flush();
 
         return $this->render('product/index.html.twig', [
-            'message' => 'Zapisano nowy produkt z ID: ' . $product->getId()
+            'message' => 'Zapisano nowy produkt z ID: ' . $product->getId(), 
         ]);
+    }
+    #[Route('/api/product/search', name: 'app_api_product_search', methods: ['GET'])]
+    public function productSearch(Request $request, ProductRepository $productRepository): Response
+    {
+        $searchQuery = $request->query->get('search_term');
+        $foundItems = $productRepository->findByDescription($searchQuery);
+
+        return $this->json($foundItems);
     }
 }

@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Form!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.div-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+	</style>
+<div id="search_results" class="div-wrapper">
+	<table id="search_results_table">
+		<thead>
+			<tr>
+				<th>
+					Nazwa produktu
+				</th>
+				<th>
+					Opis produktu
+				</th>
+				<th>
+					Cena produktu
+				</th>
+			</tr>
+		</thead>
+		<tbody id="search_results_tbody">
+
+		</tbody>
+	</table>
+</div>
+<div class="div-wrapper ">
+	<form id="search_form">
+		<label for="search_term">Nazwa produktu:</label><br>
+		<input type="text" id="search_term" name="search_term" placeholder="..."><br>
+		<input type="submit" id="submit" value="Wyślij!">
+	</form>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+	<script>
+	window.onload = function() {
+
+		const submitButton = document.getElementById('submit');
+		submitButton.addEventListener('click', async function (e) {
+
+			//preventDefault() blokuje 'normalne' wysłanie formularza, a zatem blokuje też odświeżenie strony.
+			e.preventDefault();
+			const searchTerm = document.getElementById('search_term').value;
+			let searchResultsTbodyContents = document.getElementById('search_results_tbody');
+
+
+			//wysyłamy zapytanie do serwera o rezultat wyszukiwania.
+			//await służy tu zmuszeniu javascriptu do zaczekania z wykonaniem reszty skryptu, do czasu aż nie wykona się funkcja po 'await'.
+			const request = await fetch (`{{path('app_api_product_search')}}?search_term=${searchTerm}`);
+			const result = await request.json();
+
+
+			searchResultsTbodyContents.innerHTML = "";
+
+			if(result.length < 1) searchResultsTbodyContents.innerHTML = "Brak znalezionych produktów!"
+
+
+			//map pozwala nam na przejście przez wszystkie elementy tablicy
+			result.map((row) => {
+				//dodajemy nowy wiersz w tabeli na każdy element zwróconej z API tablicy
+				searchResultsTbodyContents.innerHTML += `
+				<tr>
+					<td>${row.name}</td>
+					<td>${row.description}</td>
+					<td>${row.price}</td>
+				</tr>`;
+			})
+		});
+	}
+	</script>
+{% endblock %}

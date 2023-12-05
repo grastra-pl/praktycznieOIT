@@ -23,8 +23,8 @@ class ProductRepository extends ServiceEntityRepository
 
     public function findById($id): array
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.id = :val')
+        return $this->createQueryBuilder('u') // SELECT * from product
+            ->andWhere('u.id = :val') // WHERE id = :val
             ->setParameter('val', $id)
             ->getQuery()
             ->getOneOrNullResult();
@@ -36,5 +36,17 @@ class ProductRepository extends ServiceEntityRepository
             ->orderBy('p.id', 'ASC')
             ->getQuery()
             ->getResult();
+
+        //SELECT * FROM product ORDER BY id ASC;
+
+    }
+
+    public function findByDescription($value): ?array
+    {
+        return $this->createQueryBuilder('s') //Odpowiednik:  SELECT * FROM product
+            ->andWhere('s.description LIKE :description') // Odpowiednik:  WHERE description LIKE :description 
+            ->setParameter('description', '%'.$value.'%') // TU PODSTAWIAMY wartość zmiennej $value, otoczoną %% w miejsce parametru :description ustawionego wyżej
+            ->getQuery() // pobieramy wygenerowane zapytanie 
+            ->getResult(); // i wykonujemy
     }
 }

@@ -12,15 +12,13 @@
 			font: 18px / 1.5 sans-serif;
 		}
 	</style>
-    
-    {# Używamy wbudowanej w Twiga funkcji do sprawdzenia, czy zmienna istnieje. #}
-    {# Oznacza to, że poniższy div z <h2></h2> pojawi się tylko wtedy, jeżeli serwer zwróci zmienną o nazwie 'message'. #}
-    {# W tym przypadku jest to np. miejsce na komunikat o pomyślnym dodaniu produktu, lub o błędzie #}
+
+	{# Używamy wbudowanej w Twiga funkcji do sprawdzenia, czy zmienna istnieje. #}
+	{# Oznacza to, że poniższy div z <h2></h2> pojawi się tylko wtedy, jeżeli serwer zwróci zmienną o nazwie 'message'. #}
 	{% if message is defined %}
 		<div class="div-wrapper">
 			<h2>{{message}}</h2>
 		</div>
-
 	{% endif %}
 
 	<div class="div-wrapper ">
@@ -29,8 +27,22 @@
 			<input type="text" id="name" name="name" placeholder="Dr Pepper"><br>
 			<label for="price">Cena (w zł):</label><br>
 			<input type="number" id="price" name="price" placeholder="100"><br><br>
+
+			<label for="description">Opis produktu:</label><br>
+			<input type="text" id="description" name="description" placeholder="Dr Pepper to napój gazowany."><br>
+
 			<input type="submit" value="Wyślij!">
 		</form>
+
+			{% if product_array is defined %}
+			Lista istniejących produktów:
+			<ul>
+				{% for product in product_array %}
+					<li>Produkt {{product.id}} nazywa się {{product.name}} i kosztuje {{product.price}}zł </li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+
 
 
 	</div>
