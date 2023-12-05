@@ -28,7 +28,7 @@ class ProductController extends AbstractController
      * dwa route z tą samą ścieżką '/product'.
      * W tej funkcji:
      * 1. Przyjmujemy dane z formularza; 
-     * 2. Sprawdzamy, czy nie są puste; jeżeli tak -> zwracamy komunikat z błędem.
+     * 2. Sprawdzamy, czy są puste; jeżeli są puste -> zwracamy komunikat z błędem.
      * 3. Jeżeli nie, tworzymy objekt klasy entity "Product" i wypełniamy go danymi, zapisujemy 
      * i zwracamy komunikat o poprawnym zapisaniu danych.
      */
