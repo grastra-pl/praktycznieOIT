@@ -2,7 +2,7 @@
 
 ##  Jak ma wyglądać działająca aplikacja: 
 
-Aplikacja ma przypominać wyszukiwarkę połączeń PKP. Użytkownik podaje swoją stację początkową i końcową a także dzień, w którym chce zacząć podróż, a wyszukiwarka ma zwrócić 
+Aplikacja ma przypominać wyszukiwarkę połączeń PKP. Użytkownik podaje swoją stację początkową i końcową a także dzień, w którym chce zacząć podróż, a wyszukiwarka ma zwrócić listę wg. poniższych wymagań. 
 
 1. Strona główna zawierać ma wyszukiwarkę, która będzie składać się z następujących elementów: 
 	1. Stacja początkowa
