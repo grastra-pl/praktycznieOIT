@@ -22,7 +22,7 @@ Aplikacja ma przypominać wyszukiwarkę połączeń PKP. Użytkownik podaje swoj
 
 ## Wasze zadanie
 
-Waszym zadaniem jest jak najbardziej szczegółowe opisanie jak powyżej opisana mogłaby wyglądać od strony technicznej. Jakie powinna wyglądać struktura bazy danych? Jak powinien wyglądać kontroler? W jaki sposób powinna działać wyszukiwarka? Jakich funkcji do tego użyjecie? 
+Waszym zadaniem jest jak najbardziej szczegółowe opisanie jak powyżej opisana mogłaby wyglądać od strony technicznej. Jak powinna wyglądać struktura bazy danych? Jak powinien wyglądać kontroler? W jaki sposób powinna działać wyszukiwarka? Jakich funkcji do tego użyjecie? 
 
 **Odpowiedzi możecie wysyłać np. jako link do  Google Docsów na Slacku**
 
