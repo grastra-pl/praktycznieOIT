@@ -1,0 +1,150 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wyszukiwarka
+{% endblock %}
+
+{% block body %}
+	<style>
+		.div-wrapper {
+			margin: 5% auto 1em;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+	</style>
+
+
+<div class="modal fade" id="results_modal" tabindex="-1" aria-labelledby="example_modal_label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="example_modal_label">Wyniki wyszukiwania</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+      </div>
+      <div class="modal-body">
+		<table id="search_results_table" class="table">
+		<thead>
+		<tr>
+		<th>Nazwa pociągu</th>
+		<th>Stacja początkowa</th>
+		<th>Stacja końcowa</th>
+		<th>Data wyjazdu</th>
+		<th>Data dojazdu</th>
+		<th>Długość podróży(w km.)</th>
+		<th>Szczegóły połączenia</th>
+		</tr>
+		</thead>
+		<tbody id="search_results_tbody">
+		
+		</tbody>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	<div class="div-wrapper">
+		<h1>Witaj w wyszukiwarce połączeń kolejowych!</h1>
+		<form id="search_form">
+			<div class="form-group">
+				<label for="search_form_initial_station_select">Stacja początkowa</label>
+				<select class="form-control" id="search_form_initial_station_select" aria-describedby="search_form_initial_station_select_help" placeholder="Wybierz z listy...">
+					<option value="UNDEFINED">Wybierz z listy...</option>
+					<option value="Poznań">Poznań</option>
+					<option value="Warszawa">Warszawa</option>
+					<option value="Łódź">Łódź</option>
+					<option value="Kraków">Kraków</option>
+					<option value="Wrocław">Wrocław</option>
+					<option value="Rzeszów">Rzeszów</option>
+					<option value="Gdańsk">Gdańsk</option>
+					<option value="Szczecin">Szczecin</option>
+				</select>
+				<small id="search_form_initial_station_select_help" class="form-text text-muted">Upewnij się, że wybierzesz jedną opcję z listy.</small>
+			</div>
+
+			<div class="form-group">
+				<label for="search_form_destination_station_select">Stacja końcowa</label>
+				<select class="form-control" id="search_form_destination_station_select" aria-describedby="search_form_destination_station_select_help" placeholder="Wybierz z listy...">
+					<option value="UNDEFINED">Wybierz z listy...</option>
+					<option value="Poznań">Poznań</option>
+					<option value="Warszawa">Warszawa</option>
+					<option value="Łódź">Łódź</option>
+					<option value="Kraków">Kraków</option>
+					<option value="Wrocław">Wrocław</option>
+					<option value="Rzeszów">Rzeszów</option>
+					<option value="Gdańsk">Gdańsk</option>
+					<option value="Szczecin">Szczecin</option>
+				</select>
+				<small id="search_form_destination_station_select_help" class="form-text text-muted">Upewnij się, że wybierzesz jedną opcję z listy.</small>
+			</div>
+
+			<div class="form-group">
+				<label for="search_form_date_picker">Data podróży</label>
+				<input type="date" class="form-control" id="search_form_date_picker" value="2023-11-03">
+				<small id="search_form_date_picker_help" class="form-text text-muted">Wyszukiwanie odbędzie się dla całego wskazanego dnia.</small>
+			</div>
+			<button type="submit" class="btn btn-primary">Szukaj!</button>
+		</form>
+
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+
+	var resultsModal = new bootstrap.Modal(document.getElementById('results_modal'))
+
+    const searchResultsTbody = document.getElementById('search_results_tbody');
+    const form = document.getElementById('search_form');
+    form.addEventListener('submit', async (e)=>{
+		
+		//TODO Formularz na ten moment odświeża całą stronę przy naciśnięciu "Szukaj!". Dlaczego? Czegoś nam brakuje...?
+
+
+        const initialStationValue = document.getElementById("search_form_initial_station_select").value;
+        const destinationStationValue = document.getElementById("search_form_destination_station_select").value;
+        const dateOfTravelValue = document.getElementById("search_form_date_picker").value;
+
+		//TODO formularz powinien też sprawdzać czy użytkownik wybrał stację początkową i końcową.
+		//TODO Jeżeli użytkownik nie wypełnił poprawnie danych wyszukiwania, np. nie podał daty, skrypt nie powinien przejść dalej. Jak można to zrobić?
+
+        if(dateOfTravelValue == "") {
+            alert("Nie podałeś daty!");
+        }
+
+
+		//TODO czy czegoś tu brakuje...?
+		const res = fetch(`{{path('app_api_railway_search')}}?initial_station=${initialStationValue}&destination_station=${destinationStationValue}&date_of_travel=${dateOfTravelValue}`)
+		const data = res.json();
+
+		//TODO <a href... powinien w URLu mieć ID konkretnego połączenia, np. /connection/1200. 
+		//TODO Do wyszukania: Link do szczegółów połączenia powinien wyświetlić się w nowej karcie :)
+		//TODO Przeczytać stąd: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString 
+		//jak zrobić, żeby nie wyświetlały się sekundy w dacie wyjazdu i dojazdu.
+
+		//TODO wyniki wyszukiwania się mogą obecnie nakładać! 
+		//TODO dodać alternatywną wiadomość dla użytkownika, jeżeli wyniki wyszukiwania będą puste
+
+		data.map((row)=>{
+			searchResultsTbody.innerHTML += `<tr>
+			<td>${row.trainName}</td>
+			<td>${row.initialStation}</td>
+			<td>${row.destinationStation}</td>
+			<td>${new Date(row.leavesAt).toLocaleString('pl')}</td>
+			<td>${new Date(row.arrivesAt).toLocaleString('pl')}</td>
+			<td>${row.distanceTraveled}</td>
+			<td><a href="/connection/1500">Link</a>
+			</tr>`
+		})
+
+
+
+		resultsModal.show();
+
+    })
+    </script>
+{% endblock %}

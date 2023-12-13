@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wyszukiwarka
+{% endblock %}
+
+{% block body %}
+	<style>
+		.div-wrapper {
+			margin: 5% auto 1em;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+	</style>
+
+		<!-- TODO Jeżeli connection_data nie jest ustawione to nie należy wyświetlać poniższych danych.
+		TODO Jeżeli serwer zwróci jakąś wiadomość, wyświetlić ją. (patrz na RailwayConnectionController.php)
+		 -->
+
+	<div class="div-wrapper">
+	<h1>Połączenie {{connection_data.getInitialStation()}} - {{connection_data.getDestinationStation()}}</h1>
+		<ul>
+		<!-- TODO Przeczytać tutaj: https://www.php.net/manual/en/datetime.format.php 
+		co można zrobić żeby te funkcje wyświetlały się poprawnie i pokazywały: miesiąc, dzień, godzinę i minutę.
+		Podpowiedź: to co dostaniemy z np. getLeavesAt() to właśnie DateTime, więc można na tym wykonywać funkcje jak np. ta opisana w dokumentacji :)
+		 -->
+		<li>Wyjazd o {{connection_data.getLeavesAt()}}</li>
+		<li>Dojazd o {{connection_data.getArrivesAt()}}</li>
+		</ul>
+	</div>
+{% endblock %}
